@@ -8,11 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="icon" href="assets/nice.jpg">
+    <link rel="stylesheet" href="css/style.css">
     <title>About me</title>
   </head>
   <body>
-    <div class="w-full h-screen bg-gray-200">
-      <nav class="fixed top-0 w-full bg-[#575965] text-white p-4 z-100">
+    <div class="w-full h-screen overflow-y-auto bg-gray-200 animate-fade-in">
+      <nav class="sticky top-0 w-full bg-[#575965] text-white p-4 z-100">
         <div class="flex justify-between items-center">
           <a href="./index.html">
             <h1 class="text-xl font-bold">H J</h1>
@@ -27,15 +29,19 @@
           </ul>
         </div>
       </nav>
-      <div class="flex flex-col items-center justify-center mt-14">
+      <div class="flex flex-col items-center justify-center mt-8">
         <img
           src="assets/nice.jpg"
           alt=""
-          class="relative top-7 w-1/4 md:w-1/7 h-auto rounded-full border-2 border-black"
+          class="relative top-6 w-1/4 md:w-1/7 h-auto rounded-full border-2 border-black"
         />
         <div class="w-4/5 max-w-screen-md h-4/5 mx-auto bg-[#f8f8f6] p-8 rounded-lg shadow-xl">
           <h1 class="text-xl md:text-2xl text-center font-bold text-[#575965]" id="about-me">About me</h1>
-          <div class="flex flex-col md:flex-row gap-4 mt-4 justify-evenly p-8">
+          <p class="mt-5 text-[#575965] text-md md:text-lg md:text-xl text-center" id="typing">
+          </p>
+          <hr>
+          <h2 class="mt-4 text-center text-xl text-[#575965] font-bold font-serif">Information</h2>
+          <div class="flex flex-col md:flex-row gap-4  justify-evenly p-6">
              <div class="flex flex-col gap-2">
                <div class="flex flex-row gap-2">
                 <p><strong>姓名：</strong></p>
@@ -58,11 +64,13 @@
                 <div class="flex flex-col gap-2">
                     <p><strong>興趣：</strong></p>
                     <ol class="list-disc ml-8">
-                        <li>打排球</li>
+                        <li>打排球 <span class="">🏐</span></li>
                         <li>旅遊</li>
                     </ol>
                 </div>
             </div>
+            <!-- <h2 class="mt-2 text-center text-xl text-[#575965] font-bold font-serif">Experience</h2> -->
+
         </div>
         <div
           class="w-4/5 max-w-screen-md h-4/5 mx-auto bg-[#f8f8f6] p-8 mt-4 rounded-lg shadow-xl"
@@ -83,4 +91,30 @@
       </div>
     </div>
   </body>
+  <script>
+    let text = ["大家好", "我是洪永結", "目前就讀於中央大學資訊管理系", "我的興趣是打排球和旅遊", "希望未來能夠成為一位優秀的工程師......"];
+    let index = 0;
+    let start = 0;
+    let count = 0;
+    let currentText = "";
+
+    (function type() {
+      if (count === text.length) {
+        count = 0;
+      }
+      currentText = text[count];
+      // if ((index+1)-start === 12) start++;
+      letter = currentText.slice(start, ++index);
+
+      document.querySelector("#typing").textContent = letter;
+      if (index === currentText.length) {
+        count++;
+        // start = 0;
+        index = 0;
+      }
+      let randomTime = Math.floor(Math.random()*1000 % 300) + 100;
+      // console.log(randomTime)
+      setTimeout(type, randomTime);
+    })();
+  </script>
 </html>
