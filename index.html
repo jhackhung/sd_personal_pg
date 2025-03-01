@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>About me</title>
+  </head>
+  <body>
+    <div class="w-full h-screen bg-gray-200">
+      <nav class="fixed top-0 w-full bg-[#575965] text-white p-4 z-100">
+        <div class="flex justify-between items-center">
+          <a href="./index.html">
+            <h1 class="text-xl font-bold">H J</h1>
+          </a>
+          <ul class="flex gap-4">
+            <li>
+              <a href="#about-me" class="border border-[#f8f8f6] p-2 hover:bg-[#f8f8f6] hover:font-bold hover:text-[#575965] duration-300 ease-in-out">About</a>
+            </li>
+            <li>
+              <a href="#contact" class="border border-[#f8f8f6] p-2 hover:bg-[#f8f8f6] hover:font-bold hover:text-[#575965] duration-300 ease-in-out">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="flex flex-col items-center justify-center mt-14">
+        <img
+          src="assets/nice.jpg"
+          alt=""
+          class="relative top-7 w-1/4 md:w-1/7 h-auto rounded-full border-2 border-black"
+        />
+        <div class="w-4/5 max-w-screen-md h-4/5 mx-auto bg-[#f8f8f6] p-8 rounded-lg shadow-xl">
+          <h1 class="text-xl md:text-2xl text-center font-bold text-[#575965]" id="about-me">About me</h1>
+          <div class="flex flex-col md:flex-row gap-4 mt-4 justify-evenly p-8">
+             <div class="flex flex-col gap-2">
+               <div class="flex flex-row gap-2">
+                <p><strong>姓名：</strong></p>
+                <p>洪永結</p>
+               </div>
+                <div class="flex flex-row gap-2">
+                  <p><strong>生日：</strong></p>
+                  <p>2004/12/22</p>
+                </div>
+                <div class="flex flex-row gap-2">
+                  <p><strong>出生地：</strong></p>
+                  <p>台北市</p>
+
+                </div>
+                <div class="flex flex-row gap-2">
+                  <p><strong>就讀學校：</strong></p>
+                  <p>中央大學資訊管理系</p>
+                </div>
+             </div>
+                <div class="flex flex-col gap-2">
+                    <p><strong>興趣：</strong></p>
+                    <ol class="list-disc ml-8">
+                        <li>打排球</li>
+                        <li>旅遊</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div
+          class="w-4/5 max-w-screen-md h-4/5 mx-auto bg-[#f8f8f6] p-8 mt-4 rounded-lg shadow-xl"
+        >
+          <h1 class="text-xl md:text-2xl font-bold text-center text-[#575965]" id="contact">Contact</h1>
+          <div class="mt-5 flex gap-8 justify-center">
+            <a class="hover:scale-120 hover:text-blue-400 duration-300 ease-in-out" href="https://www.facebook.com/profile.php?id=61550118227304">
+              <i class="fa-brands fa-facebook text-4xl"></i>
+            </a>
+            <a class="hover:scale-120 hover:text-red-500 duration-300 ease-in-out" href="https://www.instagram.com/jcahknug_/?hl=zh-tw">
+              <i class="fa-brands fa-instagram text-4xl"></i>
+            </a>
+            <a class="hover:scale-120 hover:text-gray-700 duration-300 ease-in-out" href="https://github.com/jhackhung">
+              <i class="fa-brands fa-github text-4xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
